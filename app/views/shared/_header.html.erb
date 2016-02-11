@@ -1,0 +1,4 @@
+<h1>
+  OneBoard
+  <small><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'pull-right' if user_signed_in? %></small>
+</h1>

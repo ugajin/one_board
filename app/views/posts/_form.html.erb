@@ -1,4 +1,4 @@
-<%= form_for(@post) do |f| %>
+<%= bootstrap_form_for(@post, layout: :horizontal) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="actions">
+    <%= f.text_field :content %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+
+
     <%= f.submit %>
   </div>
 <% end %>
