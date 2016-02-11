@@ -17,3 +17,11 @@
 header{
     border-bottom: 1px solid #ccc;
 }
+header h1 a:hover{
+    color: #333;
+    background-color: #fff;
+    text-decoration: none;
+}
+.top-buffer{ 
+    margin-top:20px;
+}

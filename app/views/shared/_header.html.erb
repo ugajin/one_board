@@ -1,4 +1,12 @@
-<h1>
-  OneBoard
-  <small><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'pull-right' if user_signed_in? %></small>
-</h1>
+<h1 class="pull-left"><%= link_to "OneBoard", root_path %></h1>
+<% if user_signed_in? %>
+  <span id="logined_option" class="pull-right top-buffer">
+    <%= link_to "投稿する", new_post_path, class: 'btn btn-default' %></small>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-default', data: {confirm: "ログアウトしてもよろしいですか？"} %></small>
+  </span>
+<% else %>
+  <span id="logouted_option" class="pull-right top-buffer">
+    <%= link_to "ログイン", new_user_session_path, class: 'btn btn-default' %></small>
+    <%= link_to "登録", new_user_registration_path, class: 'btn btn-default' %></small>
+  </span>
+<% end %>
