@@ -1,6 +1,6 @@
 <div class="main-wrapper">
   <% if @posts.present? %>
-    <% @posts.reverse_each do |post| %>
+    <% @posts.each do |post| %>
       <div class="main-container border-bottom">
         <div class="post-header clearfix">
           <p class="h4 pull-left right-buffer">by <%= post.user_name %></p>
@@ -15,4 +15,5 @@
   <% else %>
     <h2>投稿はありません</h2>
   <% end %>
+  <div class="text-center"><%= paginate(@posts) %></div>
 </div>

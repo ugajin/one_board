@@ -20,6 +20,7 @@ gem 'bootstrap_form', github: 'bootstrap-ruby/rails-bootstrap-forms'
 gem 'bootstrap-sass'
 gem 'therubyracer'
 gem 'less-rails'
+gem 'kaminari'
 
 # gem 'bcrypt', '~> 3.1.7'
 
