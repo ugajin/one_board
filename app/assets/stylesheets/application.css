@@ -16,6 +16,7 @@
 
 header{
     border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
 }
 header h1 a:hover{
     color: #333;
@@ -24,4 +25,33 @@ header h1 a:hover{
 }
 .top-buffer{ 
     margin-top:20px;
+}
+.right-buffer{
+    margin-right: 20px;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.upper{
+    top: 0;
+}
+.right{
+    right: 0;
+}
+.border-bottom{
+    border-bottom: 1px solid #ccc;
+}
+
+.main-wrapper{
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.main-container{
+    padding-bottom: 20px;
+    width: 680px;
+    margin: 0 auto 20px auto;
 }

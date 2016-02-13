@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :posts
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :authentication_keys => [:login]
@@ -14,4 +14,7 @@ class User < ActiveRecord::Base
       where(conditions).first
     end
   end
+
+  validates :name,
+    presence: true
 end

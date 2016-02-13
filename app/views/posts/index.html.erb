@@ -1,14 +1,18 @@
-<% if @posts.present? %>
-  <% @posts.each do |post| %>
-    <h2><%= post.content if post.content.present? %></h2>
-    <%= image_tag post.image.thumb.url if post.image.present? %>
-    <tr>
-      <% if post.user_id == current_user.id %>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-    </tr>
+<div class="main-wrapper">
+  <% if @posts.present? %>
+    <% @posts.reverse_each do |post| %>
+      <div class="main-container border-bottom">
+        <div class="post-header clearfix">
+          <p class="h4 pull-left right-buffer">by <%= post.user_name %></p>
+          <% if post.user_id == current_user.id %>
+            <span class="pull-right"><%= link_to '削除', post, method: :delete, data: { confirm: '削除してもよろしいですか？' }, class: "btn btn-default" %></span>
+          <% end %>
+        </div>
+        <p class="h4"><%= post.content if post.content.present? %></p>
+        <%= image_tag post.image.thumb.url if post.image.present? %>
+      </div>
+    <% end %>
+  <% else %>
+    <h2>投稿はありません</h2>
   <% end %>
-<% else %>
-  <h2>投稿はありません</h2>
-<% end %>
+</div>
