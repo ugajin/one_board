@@ -47,6 +47,9 @@ header h1 a:hover{
 .border-bottom{
     border-bottom: 1px solid #ccc;
 }
+.color-red{
+    color: red;
+}
 
 .main-wrapper{
     padding: 20px;
