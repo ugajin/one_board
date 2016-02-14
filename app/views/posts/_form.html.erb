@@ -1,14 +1,8 @@
 <%= bootstrap_form_for(@post, layout: :horizontal) do |f| %>
   <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
       <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <p class="color-red"><%= message %></p>
       <% end %>
-      </ul>
-    </div>
   <% end %>
 
   <div class="actions">

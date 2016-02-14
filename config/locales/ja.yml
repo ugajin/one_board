@@ -100,7 +100,7 @@ ja:
     format: "%{attribute}%{message}"
     messages:
       accepted: を受諾してください
-      blank: 必須項目です
+      blank: 入力してください
       present: は入力しないでください
       confirmation: '%{attribute}と一致しません'
       empty: を入力してください
@@ -211,3 +211,4 @@ ja:
       post:
         content: コメント
         image: 画像
+        content_or_image: コメントまたは画像を

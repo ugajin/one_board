@@ -40,3 +40,12 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem "rspec"
+  gem "rspec-rails"
+  gem "faker"
+  gem "capybara"
+  gem "database_cleaner"
+  gem "launchy"
+  gem "selenium-webdriver"
+end
