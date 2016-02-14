@@ -1,4 +1,3 @@
----
 ja:
   date:
     abbr_day_names:
@@ -212,3 +211,10 @@ ja:
         content: コメント
         image: 画像
         content_or_image: コメントまたは画像を
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "..."
