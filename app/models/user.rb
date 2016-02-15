@@ -17,5 +17,6 @@ class User < ActiveRecord::Base
 
   validates :name,
     presence: true,
-    uniqueness: true
+    uniqueness: true,
+    format: { with: /\A[a-z0-9]+\z/i }
 end
