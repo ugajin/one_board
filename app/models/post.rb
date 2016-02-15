@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
   validates :user_id,
     presence: true,
     numericality: {only_integer: true, allow_blank: true}
+  validates :content,
+    length: {maximum: 255, allow_blank: true}
   validates :content_or_image, presence: true
 
 
