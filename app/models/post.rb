@@ -9,12 +9,6 @@ class Post < ActiveRecord::Base
     length: {maximum: 255, allow_blank: true}
   validates :content_or_image, presence: true
 
-
-  def user_name
-    name = User.where(id: self.user_id)[0].name
-    name
-  end
-
   private
     def content_or_image
       content.presence or image.presence

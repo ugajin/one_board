@@ -3,7 +3,7 @@
     <% @posts.each do |post| %>
       <div class="main-container border-bottom">
         <div class="post-header clearfix">
-          <p class="h4 pull-left right-buffer">by <%= post.user_name %></p>
+          <p class="h4 pull-left right-buffer">by <%= post.user.name %></p>
           <% if post.user_id == current_user.id %>
             <span class="pull-right"><%= link_to '削除', post, method: :delete, data: { confirm: '削除してもよろしいですか？' }, class: "btn btn-default" %></span>
           <% end %>
